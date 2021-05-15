@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4D8D8"
+    android:backgroundTint="#E4D8D8"
+    tools:context=".DetailUser">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgDProfile"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/cover"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img1" />
+
+        <ImageView
+            android:id="@+id/imgback"
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:contentDescription="back"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/corner_top1"
+        android:backgroundTint="#E4D8D8"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtDusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aladin"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#4747D1"
+            android:textSize="28sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtDName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aladin"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#0B0B0B"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/company" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lokasi" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDcompany"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/aladin"
+                android:text="Google Bangkit Acedemy"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtDLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/aladin"
+                android:text="Google Bangkit Acedemy"
+                android:textAlignment="center"
+                android:textColor="#070707"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imageViewDetail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="150dp"
+        android:src="@drawable/img1"
+        app:civ_border_color="#5C5C5C"
+        app:civ_border_width="3dp"
+        app:civ_circle_color="#FFFFFF"
+        app:civ_circle_color_end="#D31717"
+        app:civ_circle_color_start="#FFFFFF"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#7A7A7A"
+        app:civ_shadow_radius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="355dp"
+        android:background="#E4D8D8"
+        android:backgroundTint="#FFFFFF"
+        android:backgroundTintMode="multiply"
+        android:paddingBottom="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E4D8D8"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/NavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_top1"
+        app:itemIconTint="@color/purple_200"
+        app:itemTextColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+    <ImageView
+        android:id="@+id/imgFav"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/love" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

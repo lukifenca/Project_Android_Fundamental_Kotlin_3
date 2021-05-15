@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:backgroundTint="#2464AC"
+    tools:context=".ListUser">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="257dp"
+            android:contentDescription="@string/cover"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/gambar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:fontFamily="@font/aladin"
+                android:hint="Search"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textColorHighlight="#E85757"
+                android:textColorHint="#494848"
+                android:textColorLink="#FF1313"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/btnsearch"
+                android:layout_width="47dp"
+                android:layout_height="49dp"
+                android:layout_weight="0.16666666666"
+                app:srcCompat="@drawable/ic_baseline_search_24" />
+
+            <ImageView
+                android:id="@+id/imgListFav"
+                android:layout_width="41dp"
+                android:layout_height="49dp"
+                android:layout_weight="0.16666666666"
+                app:srcCompat="@drawable/heartblack" />
+
+            <ImageView
+                android:id="@+id/imgSetting"
+                android:layout_width="43dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.16666666666"
+                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/corner_top1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3F51B5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="230dp"
+                tools:listitem="@layout/item_cardview" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
